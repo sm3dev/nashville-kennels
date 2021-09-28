@@ -1,0 +1,85 @@
+{
+  "animals": [
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle"
+    },
+    {
+      "id": 2,
+      "name": "Decker",
+      "breed": "German Shepherd"
+    },
+    {
+      "id": 3,
+      "name": "Esme",
+      "breed": "Pitbull"
+    }
+  ],
+  "customers": [
+    {
+      "name": "Hannah Hall",
+      "address": "7002 Chestnut Ct",
+      "breedOfInterest": "Yorkie",
+      "id": 1
+    },
+    {
+      "name": "Mace Windu",
+      "address": "77 Coruscant Tower, #2",
+      "breedOfInterest": "Doberman Pinscher",
+      "id": 2
+    },
+    {
+      "name": "Charles Xavier",
+      "address": "1 School for the Gifted",
+      "breedOfInterest": "Border Collie",
+      "id": 3
+    },
+    {
+      "name": "Domino",
+      "address": "7 Winning Rd",
+      "breedOfInterest": "Dalmatian",
+      "id": 4
+    }
+  ],
+  "employees": [
+    {
+      "name": "Malcom Gladwell",
+      "locationId": 1,
+      "animalId": 1,
+      "id": 1
+    },
+    {
+      "name": "Malcom X",
+      "locationId": 2,
+      "animalId": 2,
+      "id": 2
+    }
+  ],
+  "locations": [
+    {
+      "employees": 7,
+      "name": "Nashville North",
+      "address": "209 Emory Drive",
+      "id": 1
+    },
+    {
+      "name": "Nashville South",
+      "address": "209 Emory Drive",
+      "employees": 6,
+      "id": 2
+    },
+    {
+      "name": "Not Your Grandmother's Chihuahua",
+      "address": "34 Bakers St",
+      "employees": 3,
+      "id": 3
+    },
+    {
+      "name": "Pooches R' Us",
+      "address": "12 Northwesterton Fieldville Blvd",
+      "employees": 5,
+      "id": 4
+    }
+  ]
+}
