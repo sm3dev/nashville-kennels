@@ -4,6 +4,7 @@ import { AnimalCard } from "./animal/AnimalCard";
 import { LocationCard } from "./location/LocationCard";
 import { EmployeeCard } from "./employee/EmployeeCard";
 import { CustomerCard } from "./customer/CustomerCard";
+import { PropsAndState } from "./PropsAndState";
 
 export const Kennel = () => (
   <>
@@ -14,6 +15,8 @@ export const Kennel = () => (
       <div>Visit Us at the Nashville North Location</div>
       <div>500 Puppy Way</div>
     </address>
+
+    <PropsAndState />
 
     <h2>Animals</h2>
     <article className="animals">
