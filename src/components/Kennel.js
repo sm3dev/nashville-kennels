@@ -16,8 +16,8 @@ export const Kennel = () => (
       <div>500 Puppy Way</div>
     </address>
 
-    <PropsAndState />
 
+    <PropsAndState yourName="Michael" />
     <h2>Animals</h2>
     <article className="animals">
       <AnimalCard />

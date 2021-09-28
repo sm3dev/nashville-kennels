@@ -3,6 +3,7 @@ import React, { useState } from "react";
 export const PropsAndState = ({ yourName }) => {
   let [countClicks, setCountClicks] = useState(0); //0 zero is our default value AND it's an integer
   let [saveNow, setSaveNow] = useState(false);
+les
 
   const handleClick = () => {
     //good practice:
@@ -16,6 +17,10 @@ export const PropsAndState = ({ yourName }) => {
     let newSaveNow = saveNow;
     newSaveNow = true;
     setSaveNow(newSaveNow);
+  };
+
+    const newCountClicks = ++countClicks;
+    setCountClicks(newCountClicks);
   };
 
   return (
@@ -43,6 +48,7 @@ export const PropsAndState = ({ yourName }) => {
           Save Note
         </button>
       </div>
+
     </>
   );
 };
