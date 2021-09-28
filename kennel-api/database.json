@@ -1,61 +1,4 @@
 {
-  "animals": [
-    {
-      "id": 1,
-      "name": "Doodles",
-      "breed": "Poodle"
-    },
-    {
-      "id": 2,
-      "name": "Decker",
-      "breed": "German Shepherd"
-    },
-    {
-      "id": 3,
-      "name": "Esme",
-      "breed": "Pitbull"
-    }
-  ],
-  "customers": [
-    {
-      "name": "Hannah Hall",
-      "address": "7002 Chestnut Ct",
-      "breedOfInterest": "Yorkie",
-      "id": 1
-    },
-    {
-      "name": "Mace Windu",
-      "address": "77 Coruscant Tower, #2",
-      "breedOfInterest": "Doberman Pinscher",
-      "id": 2
-    },
-    {
-      "name": "Charles Xavier",
-      "address": "1 School for the Gifted",
-      "breedOfInterest": "Border Collie",
-      "id": 3
-    },
-    {
-      "name": "Domino",
-      "address": "7 Winning Rd",
-      "breedOfInterest": "Dalmatian",
-      "id": 4
-    }
-  ],
-  "employees": [
-    {
-      "name": "Malcom Gladwell",
-      "locationId": 1,
-      "animalId": 1,
-      "id": 1
-    },
-    {
-      "name": "Malcom X",
-      "locationId": 2,
-      "animalId": 2,
-      "id": 2
-    }
-  ],
   "locations": [
     {
       "employees": 7,
@@ -81,5 +24,76 @@
       "employees": 5,
       "id": 4
     }
-  ]
+  ],
+  "animals": [
+    {
+      "name": "Doodles",
+      "breed": "Poodle",
+      "locationId": 1,
+      "customerId": 1,
+      "id": 1
+    },
+    {
+      "name": "Decker",
+      "breed": "German Shepherd",
+      "locationId": 1,
+      "customerId": 2,
+      "id": 2
+    },
+    {
+      "name": "Esme",
+      "breed": "Pitbull",
+      "locationId": 2,
+      "customerId": 3,
+      "id": 3
+    },
+    {
+      "name": "Bambi",
+      "breed": "Great Dane",
+      "locationId": 3,
+      "customerId": 4,
+      "id": 4
+    }
+  ],
+  "customers": [
+    {
+      "name": "Hannah Hall",
+      "address": "7002 Chestnut Ct",
+      "animalId": "Yorkie",
+      "id": 1
+    },
+    {
+      "name": "Mace Windu",
+      "address": "77 Coruscant Tower, #2",
+      "animalId": "Doberman Pinscher",
+      "id": 2
+    },
+    {
+      "name": "Charles Xavier",
+      "address": "1 School for the Gifted",
+      "animalId": "Border Collie",
+      "id": 3
+    },
+    {
+      "name": "Domino",
+      "address": "7 Winning Rd",
+      "animalId": "Dalmatian",
+      "id": 4
+    }
+  ],
+  "employees": [
+    {
+      "name": "Malcom Gladwell",
+      "locationId": 1,
+      "animalId": 1,
+      "id": 1
+    },
+    {
+      "name": "Malcom X",
+      "locationId": 2,
+      "animalId": 2,
+      "id": 2
+    }
+  ],
+  "employeeAnimal": []
 }
