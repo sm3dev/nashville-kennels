@@ -53,30 +53,48 @@
       "locationId": 3,
       "customerId": 4,
       "id": 4
+    },
+    {
+      "name": "Fluffie",
+      "breed": "Doberman Pinscher",
+      "locationId": 3,
+      "customerId": 2,
+      "id": 5
+    },
+    {
+      "name": "Van Buren",
+      "breed": "Border Collie",
+      "locationId": 3,
+      "customerId": 3,
+      "id": 6
     }
   ],
   "customers": [
     {
       "name": "Hannah Hall",
       "address": "7002 Chestnut Ct",
-      "animalId": "Yorkie",
+      "phoneNumber": 3185555711,
+      "animalId": 1,
       "id": 1
     },
     {
       "name": "Mace Windu",
       "address": "77 Coruscant Tower, #2",
+      "phoneNumber": 3085395711,
       "animalId": "Doberman Pinscher",
       "id": 2
     },
     {
       "name": "Charles Xavier",
       "address": "1 School for the Gifted",
-      "animalId": "Border Collie",
+      "phoneNumber": 3175555711,
+      "animalId": 6,
       "id": 3
     },
     {
       "name": "Domino",
       "address": "7 Winning Rd",
+      "phoneNumber": 3185555744,
       "animalId": "Dalmatian",
       "id": 4
     }
