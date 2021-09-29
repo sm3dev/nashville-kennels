@@ -81,7 +81,7 @@
       "name": "Mace Windu",
       "address": "77 Coruscant Tower, #2",
       "phoneNumber": 3085395711,
-      "animalId": "Doberman Pinscher",
+      "animalId": 3,
       "id": 2
     },
     {
@@ -95,7 +95,7 @@
       "name": "Domino",
       "address": "7 Winning Rd",
       "phoneNumber": 3185555744,
-      "animalId": "Dalmatian",
+      "animalId": 2,
       "id": 4
     }
   ],

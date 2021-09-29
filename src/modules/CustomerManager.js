@@ -8,5 +8,5 @@ export const getCustomerById = (customerId) => {
 };
 
 export const getAllCustomers = () => {
-  return fetch(`${remoteURL}/customers`).then((res) => res.json());
+  return fetch(`${remoteURL}/customers?_expand=animal`).then((res) => res.json());
 };
