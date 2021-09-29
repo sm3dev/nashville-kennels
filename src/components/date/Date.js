@@ -6,8 +6,9 @@ export const DateItem = () => {
     
     let newDateFormat = dateRightNowString.toDateString();
 
-
-    return (newDateFormat)
+    return (
+        <h4>The day is {newDateFormat}. <small><em>No, seriously. It's almost October, my guy.</em></small></h4>
+        )
 
 }
 

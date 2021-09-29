@@ -5,7 +5,7 @@ import { DateItem } from "./date/Date";
 export const Home = ({isAdmin, myUser}) => (
     <>
     {isAdmin ? <p>You are an admin</p> : <p>You are NOT an admin</p>}
-    <h4>The day is <DateItem />. <small><em>No, seriously. It's almost October, my guy.</em></small></h4>
+    <DateItem />.
         <h2>Nashville Kennels</h2>
         <small>Loving care when you're not there.</small>
 
