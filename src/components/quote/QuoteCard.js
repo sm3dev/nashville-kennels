@@ -1,8 +1,8 @@
 import React from "react";
 
-export const QuoteCard = ({ oneQuote }) => (
+export const QuoteCard = ({ quote }) => (
   <blockquote className="quote__element">
-  <p className="quote__text">{oneQuote.text}</p>
-  <cite className="quote__author">Breed: {oneQuote.author}</cite>
+  <p className="quote__text">{quote.text}</p>
+  <cite className="quote__author">  &mdash;{quote.author}</cite>
 </blockquote>
 )

@@ -1,21 +1,22 @@
 import { useEffect, useState } from "react";
 import { getAllQuotes } from "../../modules/QuoteManager";
 import "./Quote.css"
+import { QuoteCard } from "./QuoteCard";
 
 export const QuoteItem = () => {
   // the initial state is an empty array
-  const [quote, changeQuote] = useState([]);
+  const [quotes, setQuotes] = useState([]);
 
   // the initial state of a single quote is an object
-  const [singleQuote, changeSingle] = useState({});
+  const [quote, setQuote] = useState({});
 
   const randomNum = () => {
-    return Math.floor(Math.random() * quote.length);
+    return Math.floor(Math.random() * quotes.length);
   };
 
   // event listener for the new quote button
   const newButton = () => {
-    changeSingle(quote[randomNum()]);
+    setQuote(quotes[randomNum()]);
   };
 
   // Get a single quote from the parsed results of getQuotes()
@@ -23,8 +24,8 @@ export const QuoteItem = () => {
   // Return a single quote item
   const getAQuote = () => {
     return getAllQuotes().then((quotesFromAPI) => {
-      changeQuote(quotesFromAPI);
-      changeSingle(quotesFromAPI[randomNum()]);
+        setQuotes(quotesFromAPI);
+      setQuote(quotesFromAPI[randomNum()]);
     });
   };
 
@@ -36,10 +37,8 @@ export const QuoteItem = () => {
   // finally, use .map() to loop over the animals array to show a single Quote card
   return (
     <div className="container-cards">
-      <blockquote className="quote__element">
-        <p className="quote__text">{singleQuote.text}</p>
-        <cite className="quote__author">&mdash;{singleQuote.author}</cite>
-      </blockquote>
+        {quotes.length > 0 ? <QuoteCard quote={quotes[randomNum()]} /> : <em>loading quotes</em>}
+      
       <button className="button" onClick={newButton}>Random Quote</button>
     </div>
   );
