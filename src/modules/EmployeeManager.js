@@ -10,5 +10,5 @@ export const getEmployeeById = (employeeId) => {
 
 //for all employees http://localhost:5002/employees
 export const getAllEmployees = () => {
-  return fetch(`${remoteURL}/employees`).then((res) => res.json());
+  return fetch(`${remoteURL}/employees/?_expand=location`).then((res) => res.json());
 };
