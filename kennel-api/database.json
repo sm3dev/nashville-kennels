@@ -31,6 +31,7 @@
       "breed": "Poodle",
       "locationId": 1,
       "customerId": 1,
+      "image": "dog-1.png",
       "id": 1
     },
     {
@@ -38,6 +39,7 @@
       "breed": "German Shepherd",
       "locationId": 1,
       "customerId": 2,
+      "image": "dog-2.png",
       "id": 2
     },
     {
@@ -45,6 +47,7 @@
       "breed": "Pitbull",
       "locationId": 2,
       "customerId": 3,
+      "image": "dog-3.png",
       "id": 3
     },
     {
@@ -52,6 +55,7 @@
       "breed": "Great Dane",
       "locationId": 3,
       "customerId": 4,
+      "image": "dog-4.png",
       "id": 4
     },
     {
@@ -59,6 +63,7 @@
       "breed": "Doberman Pinscher",
       "locationId": 3,
       "customerId": 2,
+      "image": "dog-1.png",
       "id": 5
     },
     {
@@ -66,6 +71,7 @@
       "breed": "Border Collie",
       "locationId": 3,
       "customerId": 3,
+      "image": "dog-2.png",
       "id": 6
     }
   ],

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getAllQuotes } from "../../modules/QuoteManager";
+import "./Quote.css"
 
 export const QuoteItem = () => {
   // the initial state is an empty array
