@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { getAllEmployees } from "../../modules/EmployeeManager";
-import { ApplicationViews } from "../ApplicationViews";
 import { EmployeeCard } from "./EmployeeCard";
 
 export const EmployeeList = () => {

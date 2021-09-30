@@ -113,5 +113,10 @@
       "id": 2
     }
   ],
-  "employeeAnimal": []
+  "employeeAnimal": [],
+  "quotes": [
+    {
+      "id": 1
+    }
+  ]
 }
