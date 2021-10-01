@@ -13,16 +13,15 @@ export const AnimalList = () => {
         setAnimals(animalsFromAPI)
       });
     };
-  
-    // get the animals from the API on the component's first render
-    useEffect(() => {
-      getAnimals();
-    }, []);
 
     const handleDeleteAnimal = id => {
       deleteAnimal(id).then(() => getAllAnimals().then(setAnimals));
   };
   
+    // get the animals from the API on the component's first render
+    useEffect(() => {
+      getAnimals();
+    }, []);
   
     // Finally we use .map() to "loop over" the animals array to show a list of animal cards
     return (
