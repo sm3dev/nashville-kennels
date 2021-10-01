@@ -7,6 +7,12 @@
       "id": 1
     },
     {
+      "employees": 7,
+      "name": "Nashville North",
+      "address": "209 Emory Drive",
+      "id": 2
+    },
+    {
       "name": "Not Your Grandmother's Chihuahua",
       "address": "34 Bakers St",
       "employees": 3,
@@ -27,12 +33,28 @@
   ],
   "animals": [
     {
+      "name": "Bingo",
+      "breed": "Dingo",
+      "locationId": 2,
+      "customerId": 2,
+      "image": "dog-1.png",
+      "id": 1
+    },
+    {
       "name": "Decker",
       "breed": "German Shepherd",
       "locationId": 1,
       "customerId": 2,
       "image": "dog-2.png",
       "id": 2
+    },
+    {
+      "name": "Blamton",
+      "breed": "Belgian Shepherd",
+      "locationId": 1,
+      "customerId": 3,
+      "image": "dog-3.png",
+      "id": 3
     },
     {
       "name": "Bambi",
@@ -60,6 +82,20 @@
     }
   ],
   "customers": [
+    {
+      "name": "Charles Xavier",
+      "address": "1 School for the Gifted",
+      "phoneNumber": 3175555711,
+      "animalId": 6,
+      "id": 1
+    },
+    {
+      "name": "Charles Xavier",
+      "address": "1 School for the Gifted",
+      "phoneNumber": 3175555711,
+      "animalId": 6,
+      "id": 2
+    },
     {
       "name": "Charles Xavier",
       "address": "1 School for the Gifted",
