@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getAllAnimals } from "../../modules/AnimalManager";
+import { deleteAnimal, getAllAnimals } from "../../modules/AnimalManager";
 import { AnimalCard } from "./AnimalCard";
 
 export const AnimalList = () => {
@@ -13,6 +13,10 @@ export const AnimalList = () => {
         setAnimals(animalsFromAPI)
       });
     };
+
+    const handleDeleteAnimal = id => {
+      deleteAnimal(id).then(() => getAllAnimals().then(setAnimals));
+  };
   
     // get the animals from the API on the component's first render
     useEffect(() => {
@@ -22,7 +26,7 @@ export const AnimalList = () => {
     // Finally we use .map() to "loop over" the animals array to show a list of animal cards
     return (
       <div className="container-cards">
-        {animals.map(animal => <AnimalCard key={animal.id} animal={animal} />)}
+        {animals.map(animal => <AnimalCard key={animal.id} animal={animal} handleDeleteAnimal={handleDeleteAnimal} />)}
       </div>
     );
   };

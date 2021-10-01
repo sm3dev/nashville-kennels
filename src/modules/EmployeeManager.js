@@ -10,5 +10,14 @@ export const getEmployeeById = (employeeId) => {
 
 //for all employees http://localhost:5002/employees
 export const getAllEmployees = () => {
-  return fetch(`${remoteURL}/employees/?_expand=location`).then((res) => res.json());
+  return fetch(`${remoteURL}/employees/?_expand=location`).then((res) =>
+    res.json()
+  );
+};
+
+// delete an employee by id
+export const deleteEmployee = (id) => {
+  return fetch(`${remoteURL}/employees/${id}`, {
+    method: "DELETE",
+  }).then((result) => result.json());
 };
