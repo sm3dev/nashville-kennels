@@ -10,3 +10,10 @@ export const getAnimalById = (animalId) => {
 export const getAllAnimals = () => {
   return fetch(`${remoteURL}/animals`).then((res) => res.json());
 };
+
+// delete an animal by Id
+export const deleteAnimal = (id) => {
+  return fetch(`${remoteURL}/animals/${id}`, {
+    method: "DELETE"
+  }).then(result => result.json())
+}
