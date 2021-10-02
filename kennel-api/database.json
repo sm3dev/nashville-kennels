@@ -1,31 +1,57 @@
 {
   "locations": [
     {
-      "employees": 7,
+      "employeesTotal": 7,
       "name": "Nashville North",
       "address": "209 Emory Drive",
       "id": 1
     },
     {
+      "employeesTotal": 7,
+      "name": "Nashville North",
+      "address": "209 Emory Drive",
+      "id": 2
+    },
+    {
       "name": "Not Your Grandmother's Chihuahua",
       "address": "34 Bakers St",
-      "employees": 3,
+      "employeesTotal": 3,
       "id": 3
     },
     {
       "name": "Pooches R' Us",
       "address": "12 Northwesterton Fieldville Blvd",
-      "employees": 5,
+      "employeesTotal": 5,
       "id": 4
     },
     {
       "name": "Castle Greyskull",
       "address": "56 Passable Ave",
-      "employees": 5,
+      "employeesTotal": 5,
       "id": 5
+    },
+    {
+      "employeesTotal": 7,
+      "name": "Train Them Young",
+      "address": "227 Rinch Around St",
+      "id": 6
+    },
+    {
+      "employeesTotal": 5,
+      "name": "The K-9 Louvre at Nashville",
+      "address": "88 Backscratch Rd South",
+      "id": 7
     }
   ],
   "animals": [
+    {
+      "name": "Bingo",
+      "breed": "Dingo",
+      "locationId": 2,
+      "customerId": 2,
+      "image": "dog-1.png",
+      "id": 1
+    },
     {
       "name": "Decker",
       "breed": "German Shepherd",
@@ -33,6 +59,14 @@
       "customerId": 2,
       "image": "dog-2.png",
       "id": 2
+    },
+    {
+      "name": "Blamton",
+      "breed": "Belgian Shepherd",
+      "locationId": 1,
+      "customerId": 3,
+      "image": "dog-3.png",
+      "id": 3
     },
     {
       "name": "Bambi",
@@ -60,6 +94,20 @@
     }
   ],
   "customers": [
+    {
+      "name": "Charles Xavier",
+      "address": "1 School for the Gifted",
+      "phoneNumber": 3175555711,
+      "animalId": 6,
+      "id": 1
+    },
+    {
+      "name": "Charles Xavier",
+      "address": "1 School for the Gifted",
+      "phoneNumber": 3175555711,
+      "animalId": 6,
+      "id": 2
+    },
     {
       "name": "Charles Xavier",
       "address": "1 School for the Gifted",
@@ -101,10 +149,5 @@
       "id": 5
     }
   ],
-  "employeeAnimal": [],
-  "quotes": [
-    {
-      "id": 1
-    }
-  ]
+  "employeeAnimal": []
 }
