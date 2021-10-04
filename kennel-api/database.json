@@ -163,5 +163,11 @@
       "id": 5
     }
   ],
-  "employeeAnimal": []
+  "users": [
+    {
+      "id": 1,
+      "name": "Michael",
+      "email": "michael@nss.pizza"
+    }
+  ]
 }
