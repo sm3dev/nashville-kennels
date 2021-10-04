@@ -24,7 +24,7 @@ export const Locationlist = () => {
 
   // Finally, we use .map() to loop over the locations array to show a list of location cards
   return (
-    <div className="container-cards">
+    <div className="container-cards locations">
       {locations.map(location => <LocationCard key={location.id} location={location} handleDeleteLocation={handleDeleteLocation} />)}
     </div>
   );
