@@ -9,6 +9,11 @@ import { EmployeeList } from "./employee/EmployeeList";
 import { LocationDetail } from "./location/LocationDetail";
 import { AnimalForm } from "./animal/AnimalForm";
 import { useState } from "react";
+import { Redirect } from "react-router";
+import { Login } from "./auth/Login";
+import { Register } from "./auth/Register";
+
+export const ApplicationViews = ({ isAdmin, myUser }) => {
 
 const [isAuthenticated, setIsAuthenticated] = useState(
   sessionStorage.getItem("kennel_customer") !== null
@@ -19,7 +24,6 @@ const setAuthUser = (user) => {
   setIsAuthenticated(sessionStorage.getItem("kennel_customer") !== null);
 };
 
-export const ApplicationViews = ({ isAdmin, myUser }) => {
   return (
     <>
       {/* Render the location list when http://localhost:3000/ */}
