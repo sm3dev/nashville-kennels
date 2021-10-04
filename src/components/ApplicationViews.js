@@ -7,7 +7,17 @@ import { CustomerList } from "./customer/CustomerList";
 import { Locationlist } from "./location/LocationList";
 import { EmployeeList } from "./employee/EmployeeList";
 import { LocationDetail } from "./location/LocationDetail";
-import { AnimalForm } from './animal/AnimalForm'
+import { AnimalForm } from "./animal/AnimalForm";
+import { useState } from "react";
+
+const [isAuthenticated, setIsAuthenticated] = useState(
+  sessionStorage.getItem("kennel_customer") !== null
+);
+
+const setAuthUser = (user) => {
+  sessionStorage.setItem("kennel_customer", JSON.stringify(user));
+  setIsAuthenticated(sessionStorage.getItem("kennel_customer") !== null);
+};
 
 export const ApplicationViews = ({ isAdmin, myUser }) => {
   return (
@@ -16,10 +26,20 @@ export const ApplicationViews = ({ isAdmin, myUser }) => {
       <Route exact path="/">
         <Home isAdmin={isAdmin} myUser={myUser} />
       </Route>
+      
       {/* Render the animal list when http://localhost:3000/animals */}
       <Route exact path="/animals">
-        <AnimalList />
+        {isAuthenticated ? <AnimalList /> : <Redirect to="/login" />}
       </Route>
+
+      <Route path="/login">
+        <Login setAuthUser={setAuthUser} />
+      </Route>
+
+      <Route path="/register">
+        <Register setAuthUser={setAuthUser} />
+      </Route>
+
       <Route path="/animals/:animalId(\d+)">
         <AnimalDetail />
       </Route>
@@ -35,8 +55,6 @@ export const ApplicationViews = ({ isAdmin, myUser }) => {
       <Route path="/animals/create">
         <AnimalForm />
       </Route>
-
-
       {/* Render the locations list when http://localhost:3000/locations */}
       <Route exact path="/locations">
         <Locationlist />
