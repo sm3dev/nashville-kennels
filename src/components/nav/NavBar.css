@@ -16,3 +16,12 @@
   border-radius: .5em .5em 0 0;
   font-weight: bold;
 }
+.navbar a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a:visited {
+  color: currentColor;
+  text-decoration: none;
+}
