@@ -91,6 +91,13 @@
       "customerId": 3,
       "image": "dog-2.png",
       "id": 6
+    },
+    {
+      "name": "Benji",
+      "breed": "Mutt",
+      "locationId": 3,
+      "customerId": 2,
+      "id": 7
     }
   ],
   "customers": [
@@ -98,21 +105,21 @@
       "name": "Charles Xavier",
       "address": "1 School for the Gifted",
       "phoneNumber": 3175555711,
-      "animalId": 6,
+      "animalId": 3,
       "id": 1
     },
     {
-      "name": "Charles Xavier",
+      "name": "Scott Summers",
       "address": "1 School for the Gifted",
       "phoneNumber": 3175555711,
-      "animalId": 6,
+      "animalId": 1,
       "id": 2
     },
     {
-      "name": "Charles Xavier",
+      "name": "Aurora Monroe",
       "address": "1 School for the Gifted",
       "phoneNumber": 3175555711,
-      "animalId": 6,
+      "animalId": 2,
       "id": 3
     },
     {
@@ -121,6 +128,13 @@
       "phoneNumber": 3185555744,
       "animalId": 2,
       "id": 4
+    },
+    {
+      "name": "Kal-El",
+      "address": "33 Farmington Rd",
+      "phoneNumber": 3188355744,
+      "animalId": 4,
+      "id": 5
     }
   ],
   "employees": [

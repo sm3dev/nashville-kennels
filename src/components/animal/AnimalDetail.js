@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getAnimalById } from '../../modules/AnimalManager';
+import { getAnimalById, deleteAnimal } from '../../modules/AnimalManager';
 import './AnimalDetail.css';
 import { useParams, useHistory } from "react-router-dom"
 import { firstLetterCase } from '../../modules/helpers';
