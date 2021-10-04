@@ -45,7 +45,7 @@
   ],
   "animals": [
     {
-      "name": "Bingo",
+      "name": "bingo",
       "breed": "Dingo",
       "locationId": 2,
       "customerId": 2,
