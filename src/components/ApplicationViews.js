@@ -9,6 +9,11 @@ import { EmployeeList } from "./employee/EmployeeList";
 import { LocationDetail } from "./location/LocationDetail";
 import { AnimalForm } from "./animal/AnimalForm";
 import { useState } from "react";
+import { Redirect } from "react-router";
+import { Login } from "./auth/Login";
+import { Register } from "./auth/Register";
+
+export const ApplicationViews = ({ isAdmin, myUser }) => {
 
 const [isAuthenticated, setIsAuthenticated] = useState(
   sessionStorage.getItem("kennel_customer") !== null
@@ -19,7 +24,6 @@ const setAuthUser = (user) => {
   setIsAuthenticated(sessionStorage.getItem("kennel_customer") !== null);
 };
 
-export const ApplicationViews = ({ isAdmin, myUser }) => {
   return (
     <>
       {/* Render the location list when http://localhost:3000/ */}
@@ -57,18 +61,18 @@ export const ApplicationViews = ({ isAdmin, myUser }) => {
       </Route>
       {/* Render the locations list when http://localhost:3000/locations */}
       <Route exact path="/locations">
-        <Locationlist />
+      {isAuthenticated ? <Locationlist /> : <Redirect to="/login" />}
       </Route>
       <Route path="/locations/:locationId(\d+)">
         <LocationDetail />
       </Route>
       {/* Render the customers list when http://localhost:3000/customers */}
       <Route path="/customers">
-        <CustomerList />
+      {isAuthenticated ? <CustomerList /> : <Redirect to="/login" />}
       </Route>
       {/* Render the employees list when http://localhost:3000/employees */}
       <Route path="/employees">
-        <EmployeeList />
+      {isAuthenticated ? <EmployeeList /> : <Redirect to="/login" />}
       </Route>
     </>
   );

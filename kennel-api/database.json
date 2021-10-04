@@ -7,12 +7,6 @@
       "id": 1
     },
     {
-      "employeesTotal": 7,
-      "name": "Nashville North",
-      "address": "209 Emory Drive",
-      "id": 2
-    },
-    {
       "name": "Not Your Grandmother's Chihuahua",
       "address": "34 Bakers St",
       "employeesTotal": 3,
@@ -44,14 +38,6 @@
     }
   ],
   "animals": [
-    {
-      "name": "bingo",
-      "breed": "Dingo",
-      "locationId": 2,
-      "customerId": 2,
-      "image": "dog-1.png",
-      "id": 1
-    },
     {
       "name": "Decker",
       "breed": "German Shepherd",
@@ -106,6 +92,7 @@
       "address": "1 School for the Gifted",
       "phoneNumber": 3175555711,
       "animalId": 3,
+      "email": "",
       "id": 1
     },
     {
@@ -113,6 +100,7 @@
       "address": "1 School for the Gifted",
       "phoneNumber": 3175555711,
       "animalId": 1,
+      "email": "",
       "id": 2
     },
     {
@@ -120,6 +108,7 @@
       "address": "1 School for the Gifted",
       "phoneNumber": 3175555711,
       "animalId": 2,
+      "email": "",
       "id": 3
     },
     {
@@ -127,6 +116,7 @@
       "address": "7 Winning Rd",
       "phoneNumber": 3185555744,
       "animalId": 2,
+      "email": "",
       "id": 4
     },
     {
@@ -134,7 +124,18 @@
       "address": "33 Farmington Rd",
       "phoneNumber": 3188355744,
       "animalId": 4,
+      "email": "",
       "id": 5
+    },
+    {
+      "email": "ralph@nss.pizza",
+      "name": "Ralph Trezvant",
+      "id": 6
+    },
+    {
+      "email": "michael@nss.pizza",
+      "name": "Michael Wright",
+      "id": 7
     }
   ],
   "employees": [

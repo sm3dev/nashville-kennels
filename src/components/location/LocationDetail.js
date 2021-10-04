@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router";
-import { getLocationById } from "../../modules/LocationManager";
+import { getLocationById, deleteLocation, getAllLocations } from "../../modules/LocationManager";
 
 export const LocationDetail = () => {
   const [location, setLocation] = useState({ name: "", address: ""});

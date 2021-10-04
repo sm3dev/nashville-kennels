@@ -2,9 +2,26 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: left;
+  background-color: aliceblue;
 }
 
 .navbar__item {
   flex-basis: 20%;
   list-style-type: none;
+  text-align: center;
+}
+
+.navbar__item a.active {
+  background-color: white;
+  border-radius: .5em .5em 0 0;
+  font-weight: bold;
+}
+.navbar a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a:visited {
+  color: currentColor;
+  text-decoration: none;
 }
