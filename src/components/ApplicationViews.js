@@ -61,18 +61,18 @@ const setAuthUser = (user) => {
       </Route>
       {/* Render the locations list when http://localhost:3000/locations */}
       <Route exact path="/locations">
-        <Locationlist />
+      {isAuthenticated ? <Locationlist /> : <Redirect to="/login" />}
       </Route>
       <Route path="/locations/:locationId(\d+)">
         <LocationDetail />
       </Route>
       {/* Render the customers list when http://localhost:3000/customers */}
       <Route path="/customers">
-        <CustomerList />
+      {isAuthenticated ? <CustomerList /> : <Redirect to="/login" />}
       </Route>
       {/* Render the employees list when http://localhost:3000/employees */}
       <Route path="/employees">
-        <EmployeeList />
+      {isAuthenticated ? <EmployeeList /> : <Redirect to="/login" />}
       </Route>
     </>
   );
