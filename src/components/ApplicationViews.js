@@ -12,6 +12,7 @@ import { useState } from "react";
 import { Redirect } from "react-router";
 import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
+import { AnimalEditForm } from "./animal/AnimalEditForm";
 
 export const ApplicationViews = ({ isAdmin, myUser }) => {
 
@@ -44,8 +45,13 @@ const setAuthUser = (user) => {
         <Register setAuthUser={setAuthUser} />
       </Route>
 
-      <Route path="/animals/:animalId(\d+)">
-        <AnimalDetail />
+      <Route path="/animals/:animalId(\d+)/edit">
+    {isAuthenticated ? <AnimalEditForm /> : <Redirect to="/login" />}
+    </Route>
+
+
+      <Route exact path="/animals/:animalId(\d+)">
+        {isAuthenticated ? <AnimalDetail /> : <Redirect to="/login" />}
       </Route>
       {/*
           This is a new route to handle a URL with the following pattern:

@@ -39,12 +39,9 @@
   ],
   "animals": [
     {
-      "name": "Decker",
-      "breed": "German Shepherd",
-      "locationId": 1,
-      "customerId": 2,
-      "image": "dog-2.png",
-      "id": 2
+      "id": 2,
+      "name": "Dacker",
+      "breed": "German Shepherd"
     },
     {
       "name": "Blamton",
