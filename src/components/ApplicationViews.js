@@ -8,27 +8,18 @@ import { Locationlist } from "./location/LocationList";
 import { EmployeeList } from "./employee/EmployeeList";
 import { LocationDetail } from "./location/LocationDetail";
 import { AnimalForm } from "./animal/AnimalForm";
-import { useState } from "react";
 import { Redirect } from "react-router";
 import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
+import { AnimalEditForm } from "./animal/AnimalEditForm";
 
-export const ApplicationViews = ({ isAdmin, myUser }) => {
-
-const [isAuthenticated, setIsAuthenticated] = useState(
-  sessionStorage.getItem("kennel_customer") !== null
-);
-
-const setAuthUser = (user) => {
-  sessionStorage.setItem("kennel_customer", JSON.stringify(user));
-  setIsAuthenticated(sessionStorage.getItem("kennel_customer") !== null);
-};
+export const ApplicationViews = ({ setAuthUser, isAuthenticated }) => {
 
   return (
     <>
       {/* Render the location list when http://localhost:3000/ */}
       <Route exact path="/">
-        <Home isAdmin={isAdmin} myUser={myUser} />
+        <Home />
       </Route>
       
       {/* Render the animal list when http://localhost:3000/animals */}
@@ -44,8 +35,13 @@ const setAuthUser = (user) => {
         <Register setAuthUser={setAuthUser} />
       </Route>
 
-      <Route path="/animals/:animalId(\d+)">
-        <AnimalDetail />
+      <Route path="/animals/:animalId(\d+)/edit">
+    {isAuthenticated ? <AnimalEditForm /> : <Redirect to="/login" />}
+    </Route>
+
+
+      <Route exact path="/animals/:animalId(\d+)">
+        {isAuthenticated ? <AnimalDetail /> : <Redirect to="/login" />}
       </Route>
       {/*
           This is a new route to handle a URL with the following pattern:
@@ -55,7 +51,6 @@ const setAuthUser = (user) => {
           matches only numbers after the final slash in the URL
           http://localhost:3000/animals/jack
         */}
-      // Our shiny new route.
       <Route path="/animals/create">
         <AnimalForm />
       </Route>
@@ -63,6 +58,7 @@ const setAuthUser = (user) => {
       <Route exact path="/locations">
       {isAuthenticated ? <Locationlist /> : <Redirect to="/login" />}
       </Route>
+      
       <Route path="/locations/:locationId(\d+)">
         <LocationDetail />
       </Route>

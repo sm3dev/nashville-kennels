@@ -12,10 +12,10 @@
 }
 
 .navbar__item a.active {
-  background-color: white;
-  border-radius: .5em .5em 0 0;
   font-weight: bold;
-}
+  border-block: .25rem #ffffff solid;
+} 
+
 .navbar a {
   text-decoration: none;
   text-transform: uppercase;

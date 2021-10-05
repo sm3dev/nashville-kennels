@@ -39,19 +39,27 @@
   ],
   "animals": [
     {
-      "name": "Decker",
+      "id": 1,
+      "name": "Bingo",
+      "breed": "Chihuahua",
+      "locationId": 2,
+      "customerId": 1,
+      "image": "dog-2.png"
+    },
+    {
+      "id": 2,
+      "name": "Dacker",
       "breed": "German Shepherd",
       "locationId": 1,
-      "customerId": 2,
-      "image": "dog-2.png",
-      "id": 2
+      "customerId": 3,
+      "image": "dog-3.png"
     },
     {
       "name": "Blamton",
       "breed": "Belgian Shepherd",
       "locationId": 1,
       "customerId": 3,
-      "image": "dog-3.png",
+      "image": "dog-1.png",
       "id": 3
     },
     {
@@ -91,7 +99,6 @@
       "name": "Charles Xavier",
       "address": "1 School for the Gifted",
       "phoneNumber": 3175555711,
-      "animalId": 3,
       "email": "",
       "id": 1
     },
@@ -99,7 +106,6 @@
       "name": "Scott Summers",
       "address": "1 School for the Gifted",
       "phoneNumber": 3175555711,
-      "animalId": 1,
       "email": "",
       "id": 2
     },
@@ -107,7 +113,6 @@
       "name": "Aurora Monroe",
       "address": "1 School for the Gifted",
       "phoneNumber": 3175555711,
-      "animalId": 2,
       "email": "",
       "id": 3
     },
@@ -115,7 +120,6 @@
       "name": "Domino",
       "address": "7 Winning Rd",
       "phoneNumber": 3185555744,
-      "animalId": 2,
       "email": "",
       "id": 4
     },
@@ -123,19 +127,22 @@
       "name": "Kal-El",
       "address": "33 Farmington Rd",
       "phoneNumber": 3188355744,
-      "animalId": 4,
       "email": "",
       "id": 5
     },
     {
       "email": "ralph@nss.pizza",
       "name": "Ralph Trezvant",
-      "id": 6
+      "id": 6,
+      "address": "7730 Christmas Ln",
+      "phoneNumber": 3183489044
     },
     {
       "email": "michael@nss.pizza",
       "name": "Michael Wright",
-      "id": 7
+      "id": 7,
+      "address": "123 Elvis Blvd",
+      "phoneNumber": 3449820944
     }
   ],
   "employees": [

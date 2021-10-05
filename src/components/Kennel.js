@@ -3,19 +3,25 @@ import { NavBar } from "./nav/NavBar"
 import { ApplicationViews } from "./ApplicationViews"
 import { DateItem } from "./date/Date"
 import "./Kennel.css"
+import { useState } from "react"
 
-const isAdmin = true;
+export const Kennel = () => { 
 
-// example of object being passed
-const myUser = {
-    name: "Michael",
-    pet: "Bears"
-}
+    const [isAuthenticated, setIsAuthenticated] = useState(sessionStorage.getItem("kennel_customer") !== null)
 
-export const Kennel = () => (
+    const setAuthUser = (user) => {
+        sessionStorage.setItem("kennel_customer", JSON.stringify(user))
+        setIsAuthenticated(sessionStorage.getItem("kennel_customer") !== null)
+    }
+
+    const clearUser = () => {
+        sessionStorage.clear();
+        setIsAuthenticated(sessionStorage.getItem("kennel_customer") !== null)
+      }
+    return (
     <>
-        <NavBar />
-        <ApplicationViews isAdmin={isAdmin} myUser={myUser}/>
+        <NavBar clearUser={clearUser} isAuthenticated={isAuthenticated} />
+        <ApplicationViews setAuthUser={setAuthUser} isAuthenticated={isAuthenticated} />
         <DateItem />
     </>
-)
+)}
