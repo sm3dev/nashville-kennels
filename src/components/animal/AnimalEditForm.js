@@ -4,7 +4,7 @@ import { useHistory, useParams } from "react-router"
 import "./AnimalForm.css"
 
 export const AnimalEditForm = () => {
-  const [animal, setAnimal] = useState({ name: "", breed: "", locationId: 0, customerId: 0, image: "" });
+  const [animal, setAnimal] = useState({ name: "", breed: "", locationId: 1, customerId: 1, image: "" });
   const [isLoading, setIsLoading] = useState(false);
 
   const {animalId} = useParams();
@@ -25,8 +25,8 @@ export const AnimalEditForm = () => {
       id: animalId,
       name: animal.name,
       breed: animal.breed,
-      customerId: animal.customer.id,
-      locationId: animal.location.id,
+      customerId: animal.customerid,
+      locationId: animal.locationid,
       image: animal.image
     };
 
@@ -67,24 +67,27 @@ export const AnimalEditForm = () => {
               value={animal.breed}
             />
             <label htmlFor="breed">Breed</label>
+            
             <input
-              type="text"
+              type="hidden"
               required
               className="form-control"
               onChange={handleFieldChange}
-              id="breed"
-              value={animal.breed}
+              id="customer"
+              value={animal.customerId}
             />
-            <label htmlFor="location">Location</label>
+            <label htmlFor="customer">Customer</label>
+
             <input
-              type="text"
+              type="hidden"
               required
               className="form-control"
               onChange={handleFieldChange}
               id="location"
-              value={animal.location.id}
+              value={animal.locationId}
             />
-            <label htmlFor="breed">Breed</label>
+            <label htmlFor="location">Location</label>
+
           </div>
           <div className="alignRight">
             <button
