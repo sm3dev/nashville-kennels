@@ -93,8 +93,7 @@ export const AnimalEditForm = () => {
             <button
               type="button" disabled={isLoading}
               onClick={updateExistingAnimal}
-              className="btn btn-primary"
-            >Submit</button>
+              className="btn btn-primary"><i class="far fa-save"></i> Submit</button>
           </div>
         </fieldset>
       </form>

@@ -43,9 +43,7 @@ export const AnimalDetail = () => {
       {/* What's up with the question mark???? See below.*/}
       <div className="animal__location">Location: {animal.location}</div>
       <div className="animal__owner">Customer: {animal.customer}</div>
-      <button type="button" disabled={isLoading} onClick={handleDelete}>
-          Discharge
-        </button>
+      <button type="button" disabled={isLoading} onClick={handleDelete}><i class="far fa-trash"></i> Discharge</button>
     </section>
   );
 }

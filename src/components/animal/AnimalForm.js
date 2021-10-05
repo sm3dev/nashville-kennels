@@ -137,9 +137,7 @@ export const AnimalForm = () => {
 				</div>
 			</fieldset>
 			<button className="btn btn-primary"
-				onClick={handleClickSaveAnimal}>
-				Save Animal
-          </button>
+				onClick={handleClickSaveAnimal}><i class="far fa-save"></i> Save Animal</button>
 		</form>
 	)
 };

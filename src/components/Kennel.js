@@ -18,6 +18,8 @@ export const Kennel = () => {
         sessionStorage.clear();
         setIsAuthenticated(sessionStorage.getItem("kennel_customer") !== null)
       }
+
+      
     return (
     <>
         <NavBar clearUser={clearUser} isAuthenticated={isAuthenticated} />

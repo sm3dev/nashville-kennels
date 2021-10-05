@@ -17,14 +17,12 @@ export const AnimalCard = ({ animal, handleDeleteAnimal }) => {
           {firstLetterCase(animal.name)}
         </span></h3>
         <p className="animal__breed">Breed: {animal.breed}</p>
-        <button type="button" onClick={() => handleDeleteAnimal(animal.id)}>Discharge</button>
+        <button type="button" onClick={() => handleDeleteAnimal(animal.id)}><i class="far fa-trash"></i> Discharge</button>
         <Link to={`/animals/${animal.id}`}>
         <button>Details</button>
         </Link>
         <button type="button"
-  onClick={() => history.push(`/animals/${animal.id}/edit`)}>
-  Edit
-</button>
+  onClick={() => history.push(`/animals/${animal.id}/edit`)}><i class="far fa-edit"></i> Edit</button>
 
 
       </div>
