@@ -5,11 +5,13 @@ import { CustomerCard } from "./CustomerCard";
 export const CustomerList = () => {
   // the initial state is an EMPTY ARRAY
   const [customers, setCustomers] = useState([]);
+  const [customerAnimals, setCustomerAnimals] = useState([]);
 
   const getCustomers = () => {
     // after the date comes back from the API, we use the setCustomers function TO UPDATE THE STATE
     return getAllCustomers().then((customersFromAPI) => {
       setCustomers(customersFromAPI);
+      setCustomerAnimals(customersFromAPI.animals);
     });
   };
 
